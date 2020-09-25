@@ -32,7 +32,7 @@ def read_supriyo_policy_results(env):
     f1 = open(
         os.path.join(env.data_dir, "Our_policy",
                      "policy_result{0}.csv".format(scenario)))
-    line = f1.readline()
+    # line = f1.readline()
     line = f1.readline()
     while (line != ""):
         line = line.strip(" \n")
@@ -54,11 +54,11 @@ for ep in range(100):
     scenario = None
     done = False
     obs = env.reset()
-    policy = read_supriyo_policy_results(env)
+    # policy = read_supriyo_policy_results(env)
     while not done:
         action = None
         # print(obs)
-        action = get_supriyo_policy_action(env, obs, policy)
+        # action = get_supriyo_policy_action(env, obs, policy)
         # action = None
         obs, r, done, info = env.step(action)
         R += r
